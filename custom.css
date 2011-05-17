@@ -1,0 +1,73 @@
+body {
+  background: #ccc;
+  font-family: "Ubuntu";
+  font-size: 1.2em;
+}
+
+#preso, .slide {
+  background: #333;
+  color: #eee;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+  -webkit-box-shadow: 0 0 35px rgba(0,0,0,1.0);
+  -moz-box-shadow: 0 0 35px rgba(0,0,0,1.0);
+  box-shadow: 0 0 35px rgba(0,0,0,1.0);
+}
+
+h1 {
+  text-shadow: 5px 5px 5px rgba(0,0,0,0.5);
+}
+
+h2 {
+  text-shadow: 3px 3px 3px rgba(0,0,0,0.5);
+}
+
+h3 {
+  text-shadow: 2px 2px 2px rgba(0,0,0,0.5);
+}
+
+h4 {
+  font-size: 1.5em;
+  font-weight: normal; 
+  text-align: center;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+}
+
+h1, h2, h3, h4, blockquote {
+  margin: 1.4em 0.7em 1.4em 0.7em;
+}
+
+blockquote {
+  text-align: center;
+  font-style: italic;
+}
+
+pre {
+  font-size: 1.5em;
+}
+
+div.results {
+  width: auto;
+  background: #222;
+  color: #ccc;
+  font-size: 1.6em;
+  top: auto;
+  bottom: 0;
+  right: 0;
+  margin: 0 20px 20px 0;
+  border: 2px solid #888;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 20px;
+  border-radius: 20px;
+}
+
+li {
+  font-size: 1.3em;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+  margin: 25px 25px 25px 50px;
+  list-style-type: disc;
+  list-style-position: inside;
+}
+
+div.execute pre:hover {
+  cursor: pointer;
+}

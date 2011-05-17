@@ -1,0 +1,8 @@
+{
+  "name": "The Ruby Programming Language",
+  "description": "A quick introduction",
+  "sections": [
+    {"section":"basics"},
+    {"section":"features"}
+  ]
+}
