@@ -11,7 +11,7 @@
   
 > “When you introspect, you think about your thoughts and feelings. This is interesting because you're using thought to analyze thought.” — Dave Thomas
 
-!SLIDE execute
+!SLIDE
 
 ## Reflection and Objects
 
@@ -19,7 +19,11 @@
 <br/>
     @@@ ruby
     ObjectSpace.each_object(Float) { |x| puts x }
-<br/>
+
+!SLIDE execute
+
+## Reflection and Objects
+
 * You can look inside objects:
 <br/>
     @@@ ruby
@@ -42,7 +46,11 @@
     a = [1,2,3]
     a.send(a.private_methods.first.to_sym) # "initialize"
     a # now it's empty!
-<br/>
+
+!SLIDE execute
+
+## Reflection and Objects
+
 * Another way is to use the *Method* class:
 <br/>
     @@@ ruby
@@ -61,6 +69,12 @@
 <br/>
     @@@ ruby
     String.ancestors # all superclasses and mixed-in modules
+
+!SLIDE execute
+
+## Reflection and Classes
+
+* It's also possible to look inside classes:
 <br/>
     @@@ ruby
     klass = String
@@ -70,11 +84,23 @@
       result += " < " + klass.to_s
     end while klass.superclass
     result
+
+!SLIDE
+
+## Reflection and Classes
+
+* It's also possible to look inside classes:
 <br/>
     @@@ ruby
     Fixnum.constants
+<br/>
+    @@@ ruby
     Fixnum.class_variables
+<br/>
+    @@@ ruby
     Fixnum.singleton_methods(false)
+<br/>
+    @@@ ruby
     Fixnum.instance_methods(false) # prefix with private/protected/public
 
 !SLIDE

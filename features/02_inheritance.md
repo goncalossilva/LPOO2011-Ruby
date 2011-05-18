@@ -30,6 +30,8 @@
 
 ## Modules
 
+* Modules provide a namespace, avoiding name collisions
+<br/>
     @@@ ruby
     module MyModule # a module has it all
       MY_CONSTANT = "my constant" # constants
@@ -44,8 +46,6 @@
     namespaced = MyModule::MyClass.new
 
 <br/>
-
-* Modules provide a namespace, avoiding name collisions
 * Modules have another wonderful use: *mixins*
 
 !SLIDE
@@ -120,17 +120,14 @@
 ## Inheritance, Mixis and Design
 
 * Each of them serves its purpose, our job is to use the appropriately
-* This makes no sense:
+* None of these make any sense:
 <br/>
     @@@ ruby
     class Person < DataWrapper
     end
-<br/>
-* And this makes no sense either:
-<br/>
-    @@@ ruby
+    
     class Banana
       include FruitProperties
     end
 <br/>      
-* Think before you typing
+* Think before you type

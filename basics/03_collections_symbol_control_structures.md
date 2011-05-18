@@ -1,15 +1,21 @@
 !SLIDE execute
 
-## Arrays and Hashes
+## Arrays
 
-* Both store indexed collections of objects accessible through a key
-
+* Store indexed collections of objects accessible through an integer key
+* Can contain objects with different classes simultaneously
 <br/>
-
     @@@ ruby
     # array
     a = [1, "second", 3.14]
     a[2]
+    
+!SLIDE execute
+
+## Hashes
+
+* Store indexed collections of objects accessible through a key which can be any object
+* Slightly less efficient but much more flexible
 <br/>
     @@@ ruby
     # hash
@@ -33,7 +39,7 @@
     static final int NORTH = 1;
     // ... more code
     move(NORTH);
-<br/>
+<br/><br/>
     @@@ ruby
     # ruby
     move(:north)

@@ -6,18 +6,14 @@
 * Similar to the concept of anonymous methods
 * Can take parameters
 * Can be passed to methods as arguments (at the end, like an extra parameter)
-
 <br/>
-
     @@@ ruby
     sum = 0
     (1..5).each do |n| # same as [1,2,3,4,5]
       sum += n
     end
     sum
-
 <br/>
-
     @@@ ruby
     # same thing with { }
     sum = 0
@@ -31,9 +27,7 @@
 * Can be converted into objects
 * Can be stored in variables, pass them around, invoke them whenever you want
 * Great for implementing callbacks, dispatch tables, etc
-
 <br/>
-
     @@@ ruby
     class BlockAsObject
       def store_block(&my_block)
@@ -54,9 +48,7 @@
 ## Blocks as Closures
 
 * They can use local variables from the surrouding scope
-
 <br/>
-
     @@@ ruby
     def powers_of_2_proc
       value = 1
@@ -68,7 +60,6 @@
     powers_of_2.call # 2
     powers_of_2.call # 4
     powers_of_2.call # will return 8!
-
 <br/>
 
 * So, *powers_of_2_proc* returns a *Proc* that references *value*
@@ -79,6 +70,45 @@
 
 ## Iterators
 
+* In many languages, collections implement methods to generate external iterator objects
+<br/>
+    @@@ cpp
+    // C++
+    for (std::vector<int>::iterator i=list.begin(); i!=list.end(); i++) {
+      // code
+    }    
+!SLIDE
+
+## Iterators
+
+* In many languages, collections implement methods to generate external iterator objects
+<br/>
+    @@@ csharp
+    // C#
+    IEnumerator<int> i = list.GetEnumerator();
+    while (i.MoveNext()) {
+      // code
+    }
+    
+!SLIDE
+
+## Iterators
+
+* In many languages, collections implement methods to generate external iterator objects
+<br/>
+    @@@ java
+    // Java
+    Iterator i = list.iterator();
+    while (i.hasNext()) {
+      // code
+    }
+    
+!SLIDE
+
+## Iterators
+
+* When coming from other languages, many people iterate collections like this:
+<br/>
     @@@ ruby
     # familiar?
     for i in 0..2
@@ -88,17 +118,19 @@
       puts "#{word}: #{number}"
     end
     
-<br/>
+!SLIDE
 
+## Iterators
+
+* However, there's another approach:
+<br/>
     @@@ ruby
-    # the ruby way, with a lot less coupling
+    # the "ruby way", with a lot less coupling
     array.each do |word, number|
       puts "#{word}: #{number}"
     end
-
 <br/>
-
-* The method *each* is an iterator: it invokes a chunk of code repeatedly
+* The "Ruby way" is different: an iterator is internal to the collection... it's just a method that calls `yield` every time it generates a new value
 
 !SLIDE execute
 
@@ -106,9 +138,7 @@
 
 * Ruby provides a lot of useful iterators: *each*, *map*, *inject*, etc
 * But you can build your own
-
 <br/>
-
     @@@ ruby
     def fib(max)
       i1, i2 = 1, 1 # parallel assignment
@@ -121,41 +151,6 @@
     result = ""
     fib(1337) { |n| result += "#{n} " }
     result
-    
-!SLIDE
-
-## Iterators
-
-* In many languages, collections implement methods to generate external iterator objects
-
-<br/>
-
-    @@@ cpp
-    // c++
-    for (std::vector<int>::iterator i=list.begin(); i!=list.end(); i++)
-
-<br/>
-
-    @@@ csharp
-    // c#
-    IEnumerator<int> i = list.GetEnumerator();
-    while (i.MoveNext())
-
-<br/>
-      
-    @@@ java
-    // java
-    Iterator i = list.iterator();
-    while (i.hasNext())
-
-<br/>
-      
-* In Ruby, however, an iterator is internal to the collection... it's just another method that calls *yield* every time it generates a new value
-
-<br/>
-
-    @@@ ruby
-    list.each do |element|
 
 !SLIDE
 
@@ -169,23 +164,23 @@
 
 ## Enumerators
 
-* Enumerators = external iterators
-
+* When iterators aren't suitable, you can resort to enumerators
+* To put it simply, an enumerator is an external iterator
 <br/>
-
     @@@ ruby
     array = ["my", 1337, "array"]
     enumerator = array.to_enum # same as "enumerator = array.each"
     
     enumerator.next # returns "my" and moves to the next element
     enumerator.next
-    
 <br/>
 
-* Most iterators are can be used as enumerators
+!SLIDE
 
+## Enumerators
+
+* Most internal iterators are can be used as enumerators
 <br/>
-
     @@@ ruby
     string = "le fu"
     enumerator = string.each_char
