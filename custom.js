@@ -5,7 +5,7 @@ function executeRuby () {
 	codeDiv.addClass("executing");
   $.get('/eval_ruby', {code: codeDiv.text()}, function(result) {
       console.log(result);
-      if (result != null) print(result.replace("\n", "<br/>"));
+      if (result != null) print(result.replace(/\n/g, "<br/>").replace(/ /g, "&nbsp;"));
       codeDiv.removeClass("executing");
   });
 }

@@ -56,11 +56,15 @@ pre {
   font-size: 1.5em;
 }
 
+code.executing {
+  background-color: #222;
+}
+
 div.results {
   width: auto;
   background: #222;
   color: #ccc;
-  font-family: "FreeMonoMedium";
+  font-family: "monospace";
   font-size: 1.4em;
   top: auto;
   bottom: 0;
@@ -72,12 +76,26 @@ div.results {
   border-radius: 20px;
 }
 
+div.two-column-container {
+  overflow: hidden;
+	width: 100%
+}
+pre.two-column {
+  font-size: 1.4em;
+  width: 450px;
+  float:left
+}
+
 li {
   font-size: 1.3em;
   text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
   margin: 25px 25px 25px 50px;
   list-style-type: disc;
   list-style-position: inside;
+}
+
+li li {
+  font-size: 0.95em;
 }
 
 div.execute pre:hover {

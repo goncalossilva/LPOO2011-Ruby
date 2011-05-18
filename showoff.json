@@ -3,6 +3,7 @@
   "description": "A quick introduction",
   "sections": [
     {"section":"basics"},
-    {"section":"features"}
+    {"section":"features"},
+    {"section":"advanced"}
   ]
 }
