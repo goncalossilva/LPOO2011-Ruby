@@ -27,7 +27,7 @@
       end
       
       def finish
-        "Finished '#{@name}' at #{(Time.now.utc+3600).strftime('%H:%M:%S')}"
+        "Finished at #{(Time.now.utc+3600).strftime('%H:%M:%S')}!"
       end
     end
 
