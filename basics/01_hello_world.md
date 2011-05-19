@@ -38,6 +38,16 @@
 
 ## Methods
     @@@ ruby
+    def hello_world()
+      return "Hello world!" # implicit return
+    end
+
+    hello_world()
+    
+!SLIDE execute
+
+## Methods
+    @@@ ruby
     def hello_world
       "Hello world!" # implicit return
     end
