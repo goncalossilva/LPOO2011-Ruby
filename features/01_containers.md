@@ -1,3 +1,7 @@
+!SLIDE
+
+# Blocks and Iterators
+
 !SLIDE execute
 
 ## Blocks
@@ -47,7 +51,7 @@
     
 ## Blocks as Closures
 
-* They can use local variables from the surrouding scope
+* They can use local variables from the surrounding scope
 <br/>
     @@@ ruby
     def powers_of_2_proc
@@ -156,7 +160,7 @@
 
 ## Iterators
 
-* Ruby's internal interators aren't necessarily the best solution
+* Ruby's internal iterators aren't necessarily the best solution
 * What if you need the iterator to be an object?
 * What if you want to iterate multiple collections simultaneously?
 
@@ -192,7 +196,7 @@
 
 ## Containers, containers, containers!
 
-* Containers, blocks and iterators are core concepts of Ruby
+* Blocks and iterators are core concepts of Ruby
 * With practice, you'll start building classes that iterate over their contents instead of using the conventional looping constructs
 * It might seem complicated at first, but you'll start using these features naturally
 * Easy to read and maintain

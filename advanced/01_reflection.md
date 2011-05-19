@@ -1,5 +1,9 @@
 !SLIDE
 
+# Reflection
+
+!SLIDE
+
 ## Reflection
 
 * Ruby is very powerful when it comes to examining the aspects of a program within itself
@@ -109,27 +113,20 @@
 
 * Ruby let's you look at the interpreter while it executes your code
 <br/>
-    @@@ ruby
-    class Example
-      def example
-        example = true
-      end
-    end
-    
+    @@@ ruby   
     set_trace_func lambda { |event, file, line, id, binding, classname|
       printf "%8s %s:%s-2d %-15s\n", event, file, line, classname, id
     }
     
-    e = Example.new
-    e.example
+    # all code is traced from now on
 <br/>
 * And you can also get the current call stack by using calling `caller` on your methods
 
-!SLIDE execute
+!SLIDE
 
 ## Reflection and the Program's Execution
 
-* You can even get the current source file being executed with the `__FILE__` special variable, leading to an interesting Quine:
+* You can even get the current source file being executed with the `__FILE__` special variable, leading to an interesting *Quine*:
 <br/>
     @@@ ruby
     print File.read(__FILE__)

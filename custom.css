@@ -15,6 +15,12 @@ body {
   font-size: 1.2em;
 }
 
+time {
+  display: block;
+  margin-top: 200px;
+  text-align: center;
+}
+
 #preso, .slide {
   background: #333;
   color: #eee;
@@ -22,6 +28,14 @@ body {
   -webkit-box-shadow: 0 0 35px rgba(0,0,0,1.0);
   -moz-box-shadow: 0 0 35px rgba(0,0,0,1.0);
   box-shadow: 0 0 35px rgba(0,0,0,1.0);
+}
+
+a {
+  color: #bbb;
+}
+
+a:hover {
+  color: #eee;
 }
 
 h1 {
@@ -50,11 +64,18 @@ h1, h2, h3, h4, blockquote {
 blockquote {
   text-align: center;
   font-style: italic;
+  margin-top: 75px;
 }
 
 pre {
+  margin: 0 30px;
   font-size: 1.5em;
   line-height: 1.1em;
+  padding: 15px 20px;
+  border: 2px solid #555;
+  -moz-border-radius: 7px;
+  -webkit-border-radius: 7px;
+  border-radius: 7px;
 }
 
 code.executing {
@@ -63,15 +84,16 @@ code.executing {
 
 div.results {
   width: auto;
-  background: #111;
-  color: #ccc;
+  background: #eee;
+  color: #222;
   font-family: monospace;
-  font-size: 1.4em;
+  font-weight: bold;
+  font-size: 1.5em;
   top: auto;
   bottom: 0;
   right: 0;
-  margin: 0 20px 20px 0;
-  border: 2px solid #888;
+  margin: 0 10px 10px 0;
+  border: 3px solid #888;
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
   border-radius: 10px;
@@ -85,6 +107,12 @@ pre.two-column {
   font-size: 1.4em;
   width: 450px;
   float:left
+}
+pre.two-column.left {
+  margin: 0 10px 0 25px;
+}
+pre.two-column.right {
+  margin: 0 25px 0 10px;
 }
 
 li {

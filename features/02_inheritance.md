@@ -1,3 +1,7 @@
+!SLIDE
+
+# Sharing Functionality
+
 !SLIDE execute
 
 ## Inheritance
@@ -56,12 +60,71 @@
 * This is very powerful, but can be troublesome because of inheritance ambiguity
 * Ruby offers a great compromise: the simplicity of single inheritance and the power of multiple inheritance
 
+!SLIDE execute
+
+## Mixins
+
+* `include` is used to mix modules into classes or other modules
+<br/>
+    @@@ ruby
+    module ToBeIncluded
+      def foo
+        "bar"
+      end
+    end
+    
+    class MyClass
+      include ToBeIncluded
+    end
+    
+    object = MyClass.new
+    object.foo
+
+!SLIDE execute
+
+## Mixins
+
+* `extend` is used to add instance methods to a given object
+<br/>
+    @@@ ruby
+    module ToBeIncluded
+      def foo
+        "bar"
+      end
+    end
+    
+    class MyClass
+    end
+    
+    object = MyClass.new
+    object.extend ToBeIncluded
+    object.foo
+
+!SLIDE execute
+
+## Mixins
+
+* `extend` is also used to mix instance methods into a class
+<br/>
+    @@@ ruby
+    module ToBeIncluded
+      def foo
+        "bar"
+      end
+    end
+    
+    class MyClass
+      extend ToBeIncluded
+    end
+    
+    MyClass.foo
+
 !SLIDE
 
 ## Mixins
 
 <div class="two-column-container">
-  <pre class="sh_ruby sh_sourceCode two-column">
+  <pre class="sh_ruby sh_sourceCode two-column left">
   module StringHelpers
     def stringify
       if self.value > 9000
@@ -80,7 +143,7 @@
     end
   end
   </pre>
-  <pre class="sh_ruby sh_sourceCode two-column">
+  <pre class="sh_ruby sh_sourceCode two-column right">
   class Over9000Number < Number
     include StringHelpers
     
@@ -110,7 +173,7 @@
   * Inheritance
     * You should be able to replace a parent object with a child object, honoring its contract
     * A child object *is a* kind of the parent (an apple is a fruit)
-    * In the real world, strict hierarchies are restricive... we need composition!
+    * In the real world, strict hierarchies are restrictive... we need composition!
   * Mixins
     * For composition: A *has a* B, or A *uses a* B
     * Exclusively using *mixins* can be messy — both should be combined

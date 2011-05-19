@@ -1,6 +1,6 @@
 {
-  "name": "The Ruby Programming Language",
-  "description": "A quick introduction",
+  "name": "Ruby",
+  "description": "An introduction to the Ruby programming language",
   "sections": [
     {"section":"basics"},
     {"section":"features"},
