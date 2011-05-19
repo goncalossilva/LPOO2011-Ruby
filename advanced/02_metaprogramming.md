@@ -104,7 +104,7 @@
 <br/>
     @@@ ruby
     class Laptop
-      attr_accessor :memory # injects a getter and a setter for "memory"
+      attr_accessor :memory # injects a getter/setter for "memory"
     end
 <br/>
 * If you've used Ruby on Rails, you've probably dealt with associations

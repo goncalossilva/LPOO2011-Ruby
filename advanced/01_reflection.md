@@ -105,7 +105,7 @@
     Fixnum.singleton_methods(false)
 <br/>
     @@@ ruby
-    Fixnum.instance_methods(false) # prefix with private/protected/public
+    Fixnum.instance_methods(false) # private/protected/public prefix
 
 !SLIDE
 
