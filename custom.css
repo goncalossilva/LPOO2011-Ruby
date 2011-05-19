@@ -106,7 +106,8 @@ div.two-column-container {
 pre.two-column {
   font-size: 1.4em;
   width: 450px;
-  float:left
+  float:left;
+  padding-left: 0;
 }
 pre.two-column.left {
   margin: 0 10px 0 25px;

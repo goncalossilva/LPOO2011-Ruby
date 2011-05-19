@@ -134,7 +134,7 @@
       puts "#{word}: #{number}"
     end
 <br/>
-* The "Ruby way" is different: an iterator is internal to the collection... it's just a method that calls `yield` every time it generates a new value
+* The “Ruby way” is different: an iterator is internal to the collection... it's just a method that calls `yield` every time it generates a new value
 
 !SLIDE execute
 
@@ -190,7 +190,7 @@
     enumerator = string.each_char
     
     enumerator.next # returns "l" and moves to the next char
-    enumerator.next
+    enumerator.next # returns "e" and moves to the next char
     
 !SLIDE
 
