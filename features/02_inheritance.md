@@ -144,7 +144,7 @@
   end
   </pre>
   <pre class="sh_ruby sh_sourceCode two-column right">
-  class Over9000Number < Number
+  class Over9000Number &lt; Number
     include StringHelpers
     
     def initialize(value)
@@ -157,7 +157,7 @@
   end
 
   number = Over9000Number.new(42)
-  number.status 
+  number.status
   # => "Current status: Over 9000!"
   </pre>
 </div>

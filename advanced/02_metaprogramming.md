@@ -206,7 +206,7 @@
 * Ruby allows your classes to act when they're subclassed
 <br/>
     @@@ ruby
-    class SuperClass1
+    class SuperClass
       @children = [] # class variable
       
       def self.inherited(child)
