@@ -39,7 +39,7 @@
 ## Methods
     @@@ ruby
     def hello_world()
-      return "Hello world!" # implicit return
+      return "Hello world!"
     end
 
     hello_world()
@@ -48,11 +48,11 @@
 
 ## Methods
     @@@ ruby
-    def hello_world
+    def hello_world # no need for ()
       "Hello world!" # implicit return
     end
 
-    hello_world
+    hello_world # no need for ()
 
 !SLIDE execute
     
